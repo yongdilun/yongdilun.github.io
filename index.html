@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yong Di Lun – Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Yong Di Lun – a passionate full-stack software developer building modern, scalable web applications." />
+  <!-- Geist font from Vercel CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://assets.vercel.com/raw/upload/contentful/image/q/cncde5Ts91HHBqUlLSb1g/GeistVariableVF.woff2') format('woff2');
+      font-weight: 100 900; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist Mono';
+      src: url('https://assets.vercel.com/raw/upload/contentful/image/q/GeistMonoVariableVF.woff2') format('woff2');
+      font-weight: 100 900; font-display: swap;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Yong Di Lun</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name">
+        <span class="line">Hi, I'm</span>
+        <span class="line name-highlight">Yong Di Lun</span>
+      </h1>
+
+      <p class="hero-tagline">
+        Full‑Stack Developer crafting<br />
+        <span class="typed-wrapper"><span id="typed"></span><span class="cursor">|</span></span>
+      </p>
+
+      <p class="hero-sub">
+        I build robust, scalable web applications from polished front-ends to high-performance back-ends.
+        Passionate about clean architecture, great UX, and shipping products that matter.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+
+      <div class="hero-stack">
+        <span class="stack-label">Tech I use</span>
+        <div class="stack-pills">
+          <span>React</span><span>TypeScript</span><span>Go</span>
+          <span>Node.js</span><span>SQL</span><span>Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <img src="YongDiLun_ProfilePicture.png" alt="Yong Di Lun" class="avatar-img" />
+      </div>
+      <div class="floating-card card-1">
+        <span class="fc-icon">⚡</span>
+        <span>Clean Code</span>
+      </div>
+      <div class="floating-card card-2">
+        <span class="fc-icon">🚀</span>
+        <span>Fast Delivery</span>
+      </div>
+      <div class="floating-card card-3">
+        <span class="fc-icon">🔒</span>
+        <span>Secure APIs</span>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-tag">About Me</div>
+      <h2 class="section-title">A developer who cares about the details</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a full-stack developer with hands-on experience building production-ready
+            web applications using modern technologies. I enjoy working across the entire stack —
+            designing intuitive UIs, architecting RESTful APIs, and optimising database schemas.
+          </p>
+          <p>
+            My projects range from Learning Management Systems to factory operations agents,
+            always with a focus on clean architecture, security, and maintainability.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <span>Bandar Puchong Jaya, Malaysia</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📧</span>
+              <a href="mailto:dilunyong@gmail.com">dilunyong@gmail.com</a>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📱</span>
+              <span>010-841-0157</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">💻</span>
+              <a href="https://github.com/yongdilun" target="_blank" rel="noopener">github.com/yongdilun</a>
+            </div>
+          </div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🖥️</div>
+            <h3>Frontend</h3>
+            <ul>
+              <li>React / TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>HTML & CSS</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <h3>Backend</h3>
+            <ul>
+              <li>Go (Gin / Fiber)</li>
+              <li>Node.js / Express</li>
+              <li>Python / Flask</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <h3>Database</h3>
+            <ul>
+              <li>MS SQL Server</li>
+              <li>MySQL / PostgreSQL</li>
+              <li>GORM / Prisma</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🛠️</div>
+            <h3>Tools</h3>
+            <ul>
+              <li>Git / GitHub</li>
+              <li>Docker</li>
+              <li>JWT / REST APIs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-tag">Projects</div>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-sub">Each project is a story — here's a glimpse into the work I'm most proud of.</p>
+
+      <div class="projects-list">
+
+        <!-- PROJECT CARD: ClassConnect -->
+        <article class="project-card" id="proj-classconnect">
+          <div class="project-images">
+            <div class="image-carousel" id="carousel-0">
+              <div class="carousel-track">
+                <img src="ClassConnect_student_landingPage.png"     alt="ClassConnect Landing Page"     class="carousel-slide" loading="lazy" />
+                <img src="ClassConnect_student_studentDashboard.png" alt="ClassConnect Student Dashboard" class="carousel-slide" loading="lazy" />
+                <img src="ClassConnect_student_classList.png"        alt="ClassConnect Class List"        class="carousel-slide" loading="lazy" />
+                <img src="ClassConnect_student_classDetail.png"      alt="ClassConnect Class Detail"      class="carousel-slide" loading="lazy" />
+                <img src="ClassConnect_student_assigmentDetail.png"  alt="ClassConnect Assignment Detail"  class="carousel-slide" loading="lazy" />
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous image" onclick="moveCarousel('carousel-0', -1)">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next image"     onclick="moveCarousel('carousel-0',  1)">&#8250;</button>
+              <div class="carousel-dots" id="dots-carousel-0"></div>
+            </div>
+            <div class="project-number">01</div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Full-Stack Web App</span>
+              <span class="project-status status-complete">Completed</span>
+            </div>
+
+            <h3 class="project-title">ClassConnect</h3>
+            <p class="project-subtitle">Learning Management System</p>
+
+            <p class="project-desc">
+              A full-stack Google Classroom-inspired platform for teachers and students to manage
+              online learning. Features separate role-based dashboards for class management,
+              assignments, grading, announcements, real-time chat, and progress tracking.
+            </p>
+
+            <div class="project-highlights">
+              <h4>Key Highlights</h4>
+              <ul>
+                <li>Role-based authentication for Teacher / Student access</li>
+                <li>Virtual classroom creation and enrollment with class codes</li>
+                <li>Assignment submission, grading, and feedback system</li>
+                <li>Real-time class communication features</li>
+                <li>RESTful API backend with secure JWT authentication</li>
+                <li>Responsive modern UI with scalable architecture</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Go (Gin)</span>
+              <span>GORM</span>
+              <span>JWT</span>
+              <span>MS SQL Server</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/yongdilun" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD: Auto Service Portal -->
+        <article class="project-card" id="proj-autoserviceportal">
+          <div class="project-images">
+            <div class="image-carousel" id="carousel-1">
+              <div class="carousel-track">
+                <img src="asp_dashboard.png" alt="Auto Service Portal overview dashboard" class="carousel-slide" loading="lazy" />
+                <img src="asp_cust_dashboard.png" alt="Auto Service Portal customer dashboard" class="carousel-slide" loading="lazy" />
+                <img src="asp_cust_services.png" alt="Auto Service Portal customer services" class="carousel-slide" loading="lazy" />
+                <img src="asp_cust_book_appoinment.png" alt="Auto Service Portal book appointment" class="carousel-slide" loading="lazy" />
+                <img src="asp_staff_dashboard.png" alt="Auto Service Portal staff dashboard" class="carousel-slide" loading="lazy" />
+                <img src="asp_staff_appointment_manage.png" alt="Auto Service Portal staff appointment management" class="carousel-slide" loading="lazy" />
+                <img src="asp_staff_service_manage.png" alt="Auto Service Portal staff service management" class="carousel-slide" loading="lazy" />
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous image" onclick="moveCarousel('carousel-1', -1)">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next image" onclick="moveCarousel('carousel-1',  1)">&#8250;</button>
+              <div class="carousel-dots" id="dots-carousel-1"></div>
+            </div>
+            <div class="project-number">02</div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Full-Stack Web App</span>
+              <span class="project-status status-complete">Completed</span>
+            </div>
+
+            <h3 class="project-title">Auto Service Portal</h3>
+            <p class="project-subtitle">Automotive service management</p>
+
+            <p class="project-desc">
+              A full-stack automotive service management platform inspired by real workshop workflows. Customers book and track service appointments, manage vehicles, and see notifications; staff manage schedules, outlets, services, and appointment lifecycles. Clear role-based flows separate customer and staff experiences.
+            </p>
+
+            <div class="project-highlights">
+              <h4>Key Highlights</h4>
+              <ul>
+                <li>Role-based access for Customer vs Staff (login, dashboards, and guarded routes)</li>
+                <li>Appointment booking with services, outlets, time slots, and status tracking</li>
+                <li>Vehicle management (CRUD) tied to customer accounts</li>
+                <li>Staff scheduling and appointment operations (confirm, progress, complete, etc.)</li>
+                <li>Notifications for appointment-related updates</li>
+                <li>REST API backend with Spring Security and structured access control</li>
+                <li>Redis-backed caching for performance</li>
+                <li>Responsive UI: React, TypeScript, Vite, Tailwind CSS, React Router</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span>Spring Boot</span>
+              <span>Java</span>
+              <span>MyBatis</span>
+              <span>MySQL</span>
+              <span>Redis</span>
+              <span>Spring Security</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Vite</span>
+              <span>Axios</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/yongdilun/AutoServicePortal" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD: ERecipeHub -->
+        <article class="project-card" id="proj-erecipehub">
+          <div class="project-images">
+            <div class="image-carousel" id="carousel-2">
+              <div class="carousel-track">
+                <img src="erecipe_user_discover_recipe.png" alt="ERecipeHub discover recipes" class="carousel-slide" loading="lazy" />
+                <img src="erecipe_user_recipe_detail.png" alt="ERecipeHub recipe detail" class="carousel-slide" loading="lazy" />
+                <img src="erecipe_user_create_recipe.png" alt="ERecipeHub create recipe" class="carousel-slide" loading="lazy" />
+                <img src="erecipe_admin_dashboard.png" alt="ERecipeHub admin dashboard" class="carousel-slide" loading="lazy" />
+                <img src="erecipe_admin_manage_recipe.png" alt="ERecipeHub admin recipe management" class="carousel-slide" loading="lazy" />
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous image" onclick="moveCarousel('carousel-2', -1)">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next image" onclick="moveCarousel('carousel-2',  1)">&#8250;</button>
+              <div class="carousel-dots" id="dots-carousel-2"></div>
+            </div>
+            <div class="project-number">03</div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Full-Stack Web App</span>
+              <span class="project-status status-complete">Completed</span>
+            </div>
+
+            <h3 class="project-title">ERecipeHub</h3>
+            <p class="project-subtitle">Recipe sharing platform</p>
+
+            <p class="project-desc">
+              A full-stack recipe community where people discover, create, and share recipes. It offers separate experiences for everyday users (browse, save, rate, and comment) and administrators (moderation and recipe management), with secure accounts and a REST API behind a responsive web UI.
+            </p>
+
+            <div class="project-highlights">
+              <h4>Key Highlights</h4>
+              <ul>
+                <li>Role-based flows for users and admin (content moderation, dashboard)</li>
+                <li>Recipe discovery with search, filters, and sorting</li>
+                <li>CRUD recipes, images (upload / Cloudinary), ratings, comments, and favorites</li>
+                <li>Reporting for unsafe or inappropriate content</li>
+                <li>REST API with JWT auth and password hashing (bcrypt)</li>
+                <li>Responsive layout for phones and desktops</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>CSS3</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>Mongoose</span>
+              <span>JWT</span>
+              <span>Multer</span>
+              <span>Cloudinary</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/yongdilun/ERecipeHub" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD: GinChat -->
+        <article class="project-card" id="proj-ginchat">
+          <div class="project-images">
+            <div class="image-carousel" id="carousel-3">
+              <div class="carousel-track">
+                <img src="gin_web_chat.png" alt="GinChat web chat" class="carousel-slide" loading="lazy" />
+                <div class="carousel-slide carousel-slide--mobile-trio" role="group" aria-label="GinChat mobile screens">
+                  <img src="gin_mobile_chat_list.png" alt="GinChat mobile chat list" loading="lazy" />
+                  <img src="gin_mobile_create_chat_room.png" alt="GinChat mobile create chat room" loading="lazy" />
+                  <img src="gin_mobile_chat_detail.png" alt="GinChat mobile chat conversation" loading="lazy" />
+                </div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous image" onclick="moveCarousel('carousel-3', -1)">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next image" onclick="moveCarousel('carousel-3',  1)">&#8250;</button>
+              <div class="carousel-dots" id="dots-carousel-3"></div>
+            </div>
+            <div class="project-number">04</div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Full-Stack · Web &amp; Mobile</span>
+              <span class="project-status status-complete">Completed</span>
+            </div>
+
+            <h3 class="project-title">GinChat</h3>
+            <p class="project-subtitle">Real-time chat platform</p>
+
+            <p class="project-desc">
+              A cross-platform chat product where people sign in, join rooms by code, and message instantly on web and mobile. It pairs a Go API with WebSockets for live updates, stores users in MySQL and chat data in MongoDB, and ships a responsive Next.js UI plus an Expo app—with JWT auth, bcrypt passwords, and Swagger-documented REST endpoints.
+            </p>
+
+            <div class="project-highlights">
+              <h4>Key Highlights</h4>
+              <ul>
+                <li>Accounts with JWT auth and bcrypt password hashing</li>
+                <li>Chatrooms with join codes and optional passwords</li>
+                <li>Real-time messaging over WebSockets (gorilla/websocket)</li>
+                <li>Text and rich media (images, audio, video) via Cloudinary</li>
+                <li>Read receipts and unread counts (WhatsApp-style ticks on web)</li>
+                <li>REST API + Swagger at /swagger/index.html</li>
+                <li>Responsive web (Next.js + Tailwind + Framer Motion) and React Native (Expo) clients</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span>Go</span>
+              <span>Gin</span>
+              <span>GORM</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Gorilla WebSocket</span>
+              <span>JWT</span>
+              <span>Bcrypt</span>
+              <span>React</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>React Native</span>
+              <span>Expo</span>
+              <span>Cloudinary</span>
+              <span>Axios</span>
+              <span>React Hook Form</span>
+              <span>Zustand</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/yongdilun/GinChat" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Web &amp; server
+              </a>
+              <a href="https://github.com/yongdilun/GinChatMobile" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Mobile (Expo)
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD: Song Clash (API + Flutter client) -->
+        <article class="project-card" id="proj-songclash">
+          <div class="project-images">
+            <div class="image-carousel" id="carousel-4">
+              <div class="carousel-track">
+                <img src="song_dashboard.png" alt="Song Clash home dashboard" class="carousel-slide" loading="lazy" />
+                <img src="song_start_game.png" alt="Song Clash start game" class="carousel-slide" loading="lazy" />
+                <img src="song_waiting_room.png" alt="Song Clash multiplayer waiting room" class="carousel-slide" loading="lazy" />
+                <img src="song_game.png" alt="Song Clash in-game round" class="carousel-slide" loading="lazy" />
+                <img src="song_round_result.png" alt="Song Clash round result" class="carousel-slide" loading="lazy" />
+                <img src="song_game_result.png" alt="Song Clash final score" class="carousel-slide" loading="lazy" />
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous image" onclick="moveCarousel('carousel-4', -1)">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next image" onclick="moveCarousel('carousel-4',  1)">&#8250;</button>
+              <div class="carousel-dots" id="dots-carousel-4"></div>
+            </div>
+            <div class="project-number">05</div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-type">Go API · Flutter client</span>
+              <span class="project-status status-complete">Completed</span>
+            </div>
+
+            <h3 class="project-title">Song Clash</h3>
+            <p class="project-subtitle">Music clip quiz platform &amp; multiplayer game</p>
+
+            <p class="project-desc">
+              A split stack for a “guess the song / artist” experience: a Go backend owns song catalogs, filtering, random clip selection, multiplayer rooms, and real-time play over WebSockets—while a Flutter client delivers solo, 1v1, and room-based modes with timed rounds, audio preloading, and localization. Operators can build clip libraries from YouTube via a Python + ffmpeg pipeline, with optional Google Drive hosting for MP3s and local text catalogs for metadata—so clients focus on UX while the API owns catalog, randomization, and room lifecycle.
+            </p>
+
+            <div class="project-highlights">
+              <h4>Key Highlights</h4>
+              <ul>
+                <li>Backend: REST API for songs/artists—filters by language, year, range, artist; random unique picks; health &amp; CORS (net/http).</li>
+                <li>Rooms: create/join/leave, host actions (start, kick), room/game state, delete room; WebSocket hub (gorilla/websocket) at /rooms/{roomId}/stream.</li>
+                <li>Pipeline: Python + yt-dlp + ffmpeg for 15s clips; Language/Year folder layout; Drive integration when folder ID / API key are set; QC scripts (verify, silent-clip checks, sync helpers).</li>
+                <li>Flutter game: Solo, 1v1, and multiplayer with waiting room; guess song name or artist from the same clip loop.</li>
+                <li>Audio &amp; sync: audioplayers + preload for next clip, countdown, fallbacks (web behavior documented in-repo); WebSocket room coordination with HTTP for room/song APIs.</li>
+                <li>Localization &amp; architecture: English, Chinese, and Japanese; Provider + services (song_data, room, realtime_room, audio); Android, iOS, and web from one codebase.</li>
+                <li>Deploy: production API at https://song-clash-api.onrender.com (overrideable for local dev).</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span>Go</span>
+              <span>Gorilla WebSocket</span>
+              <span>Google Drive API</span>
+              <span>Python</span>
+              <span>yt-dlp</span>
+              <span>ffmpeg</span>
+              <span>net/http</span>
+              <span>godotenv</span>
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Provider</span>
+              <span>HTTP</span>
+              <span>web_socket_channel</span>
+              <span>audioplayers</span>
+              <span>shared_preferences</span>
+              <span>Material</span>
+              <span>Cupertino</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/yongdilun/Song-Clash-Api" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Go API
+              </a>
+              <a href="https://github.com/yongdilun/Song-Clash-Flutter" target="_blank" rel="noopener" class="link-btn link-github">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                Flutter app
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- COMING SOON CARDS (placeholder for more projects) -->
+        <div class="coming-soon-grid">
+          <div class="coming-soon-card">
+            <div class="cs-number">06</div>
+            <div class="cs-content">
+              <span class="cs-badge">Coming Soon</span>
+              <p>Next project will be added here</p>
+            </div>
+          </div>
+          <div class="coming-soon-card">
+            <div class="cs-number">07</div>
+            <div class="cs-content">
+              <span class="cs-badge">Coming Soon</span>
+              <p>Next project will be added here</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-tag">Contact</div>
+      <h2 class="section-title">Let's work together</h2>
+      <p class="section-sub">
+        I'm currently open to new opportunities. Whether you have a project in mind
+        or just want to say hi — my inbox is always open.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:dilunyong@gmail.com" class="contact-card" id="contact-email">
+          <div class="cc-icon">📧</div>
+          <div class="cc-label">Email</div>
+          <div class="cc-value">dilunyong@gmail.com</div>
+        </a>
+        <a href="tel:0108410157" class="contact-card" id="contact-phone">
+          <div class="cc-icon">📱</div>
+          <div class="cc-label">Phone</div>
+          <div class="cc-value">010-841-0157</div>
+        </a>
+        <a href="https://github.com/yongdilun" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+          <div class="cc-icon">💻</div>
+          <div class="cc-label">GitHub</div>
+          <div class="cc-value">github.com/yongdilun</div>
+        </a>
+        <div class="contact-card" id="contact-location">
+          <div class="cc-icon">📍</div>
+          <div class="cc-label">Location</div>
+          <div class="cc-value">Puchong Jaya, Malaysia</div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Yong Di Lun. Built with care & clean code.</p>
+      <p class="footer-links">
+        <a href="#hero">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
