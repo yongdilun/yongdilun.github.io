@@ -189,14 +189,26 @@
       <div class="projects-list">
 
 
-        <!-- PROJECT CARD: eMAS (no screenshots yet) -->
-        <article class="project-card project-card--no-media" id="proj-emas">
+        <!-- PROJECT CARD: eMAS -->
+        <article class="project-card" id="proj-emas">
           <div class="project-images">
-            <div class="project-media-placeholder">
-              <span class="pmp-logo">eMAS</span>
-              <span class="pmp-line">Go API · Python agents · Next.js control plane</span>
-              <span class="pmp-note">Screenshots coming soon</span>
+            <div class="image-carousel" id="carousel-5">
+              <div class="carousel-track">
+                <img src="eMas_chat_rag.png" alt="eMAS chat with RAG retrieval" class="carousel-slide" loading="lazy" />
+                <img src="eMas_scedule_preview.png" alt="eMAS schedule preview" class="carousel-slide" loading="lazy" />
+                <img src="eMas_sceduling_with_chat.png" alt="eMAS scheduling with chat" class="carousel-slide" loading="lazy" />
+                <img src="eMas_sceduling_with_chat_dark.png" alt="eMAS scheduling with chat dark mode" class="carousel-slide" loading="lazy" />
+                <img src="eMas_shortage_resolution_center.png" alt="eMAS shortage resolution center" class="carousel-slide" loading="lazy" />
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous image" onclick="moveCarousel('carousel-5', -1)">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Next image" onclick="moveCarousel('carousel-5',  1)">&#8250;</button>
+              <div class="carousel-dots" id="dots-carousel-5"></div>
             </div>
+            <span class="project-media-label">Quick Demo:</span>
+            <video class="project-video" controls muted poster preload="metadata">
+              <source src="emas_demo_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <div class="project-number">01</div>
           </div>
 
