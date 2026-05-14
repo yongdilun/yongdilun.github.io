@@ -353,6 +353,14 @@ section + section { border-top: 1px solid var(--black); }
   font-size: 13px; font-weight: 400;
   color: var(--gray-600); padding: 2px 0;
 }
+.skill-card-mid {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: var(--gray-600);
+  margin: 0;
+}
 
 /* ═══════════════════════════════════════════
    PROJECTS
@@ -477,7 +485,7 @@ section + section { border-top: 1px solid var(--black); }
 
 /* Project info */
 .project-info { display: flex; flex-direction: column; gap: 14px; }
-.project-meta { display: flex; gap: 8px; align-items: center; }
+.project-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
 .project-type {
   font-size: 12px; font-weight: 500;
@@ -485,11 +493,74 @@ section + section { border-top: 1px solid var(--black); }
   padding: 0 10px; border-radius: var(--r-pill); height: 22px;
   line-height: 22px;
 }
+.project-type.is-multiline {
+  height: auto;
+  min-height: 22px;
+  line-height: 1.35;
+  padding: 5px 10px;
+  max-width: 100%;
+}
 .project-status { font-size: 12px; font-weight: 500; padding: 0 10px; border-radius: var(--r-pill); height: 22px; line-height: 22px; }
 .status-complete {
   background: #f0fdf4; color: #16a34a;
 }
+.status-in-dev {
+  background: #fffbeb;
+  color: #b45309;
+  height: auto;
+  min-height: 22px;
+  line-height: 1.35;
+  padding: 4px 10px;
+  max-width: 100%;
+}
 
+/* Card with no carousel — branded placeholder panel */
+.project-card--no-media .project-images {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.project-media-placeholder {
+  flex: 1;
+  min-height: 304px;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-ring);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(155deg, #0f172a 0%, #1e293b 42%, #334155 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: var(--sp-6);
+  text-align: center;
+}
+.project-media-placeholder .pmp-logo {
+  font-family: 'Geist Mono', monospace;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.94);
+}
+.project-media-placeholder .pmp-line {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(148, 163, 184, 0.95);
+  max-width: 220px;
+  line-height: 1.45;
+}
+.project-media-placeholder .pmp-note {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(251, 191, 36, 0.9);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(0, 0, 0, 0.2);
+}
 .project-title {
   font-size: 28px; font-weight: 600;
   letter-spacing: -1.28px; line-height: 1.25;
@@ -678,5 +749,8 @@ section + section { border-top: 1px solid var(--black); }
   .carousel-slide--mobile-trio {
     gap: 8px;
     padding: 10px 8px;
+  }
+  .project-media-placeholder {
+    min-height: 240px;
   }
 }
