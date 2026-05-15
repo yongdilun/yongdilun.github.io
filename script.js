@@ -1,33 +1,8 @@
-/* ─── Typed text animation ─── */
-const phrases = [
-  'clean, scalable web apps.',
-  'full-stack solutions.',
-  'RESTful APIs you can trust.',
-  'great user experiences.',
-];
-
-let phraseIdx = 0, charIdx = 0, deleting = false;
+/* ─── Hero text ─── */
 const typedEl = document.getElementById('typed');
-
-function type() {
-  const current = phrases[phraseIdx];
-  if (deleting) {
-    typedEl.textContent = current.slice(0, --charIdx);
-  } else {
-    typedEl.textContent = current.slice(0, ++charIdx);
-  }
-
-  let delay = deleting ? 45 : 80;
-  if (!deleting && charIdx === current.length) {
-    delay = 1800; deleting = true;
-  } else if (deleting && charIdx === 0) {
-    deleting = false;
-    phraseIdx = (phraseIdx + 1) % phrases.length;
-    delay = 400;
-  }
-  setTimeout(type, delay);
+if (typedEl) {
+  typedEl.textContent = 'clean, scalable web apps.';
 }
-type();
 
 /* ─── Navbar shadow on scroll ─── */
 const navbar = document.getElementById('navbar');
@@ -43,7 +18,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.project-card, .skill-card, .contact-card, .coming-soon-card, .about-text, .skills-grid'
+  '.project-card, .skill-card, .contact-card, .about-text, .skills-grid'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
@@ -87,20 +62,7 @@ function moveCarousel(id, dir) {
   goToSlide(id, next);
 }
 
-// Auto-advance every 4 s
-function startAutoPlay(id) {
-  return setInterval(() => {
-    const wrap = document.getElementById(id);
-    if (!wrap) return;
-    const slides = wrap.querySelectorAll('.carousel-slide');
-    const next = (carouselState[id] + 1) % slides.length;
-    goToSlide(id, next);
-  }, 4000);
-}
-
 // Init all carousels on page
 document.querySelectorAll('.image-carousel').forEach(c => {
   initCarousel(c.id);
-  const timer = startAutoPlay(c.id);
-  c.addEventListener('mouseenter', () => clearInterval(timer));
 });

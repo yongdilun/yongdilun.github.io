@@ -30,7 +30,8 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Yong Di Lun</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -40,10 +41,6 @@
 
   <!-- ═══ HERO ═══ -->
   <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow glow-1"></div>
-    <div class="hero-glow glow-2"></div>
-
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
@@ -70,13 +67,6 @@
         <a href="#contact" class="btn-ghost">Get In Touch</a>
       </div>
 
-      <div class="hero-stack">
-        <span class="stack-label">Tech I use</span>
-        <div class="stack-pills">
-          <span>React</span><span>TypeScript</span><span>Go</span>
-          <span>Node.js</span><span>SQL</span><span>Docker</span>
-        </div>
-      </div>
     </div>
 
     <div class="hero-visual">
@@ -180,12 +170,10 @@
   </section>
 
   <!-- ═══ PROJECTS ═══ -->
-  <section id="projects">
+  <section id="projects" class="projects-section" aria-label="Projects">
     <div class="section-inner">
       <div class="section-tag">Projects</div>
       <h2 class="section-title">Things I've built</h2>
-      <p class="section-sub">Each project is a story — here's a glimpse into the work I'm most proud of.</p>
-
       <div class="projects-list">
 
 
@@ -204,11 +192,13 @@
               <button class="carousel-btn next" aria-label="Next image" onclick="moveCarousel('carousel-5',  1)">&#8250;</button>
               <div class="carousel-dots" id="dots-carousel-5"></div>
             </div>
-            <span class="project-media-label">Quick Demo:</span>
-            <video class="project-video" controls muted poster preload="metadata">
-              <source src="emas_demo_video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <details class="project-demo">
+              <summary>Watch Quick Demo</summary>
+              <video class="project-video" controls muted preload="metadata">
+                <source src="emas_demo_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </details>
             <div class="project-number">01</div>
           </div>
 
@@ -228,8 +218,8 @@
               and deterministic guardrails to support safe AI-assisted factory operations.
             </p>
 
-            <div class="project-highlights">
-              <h4>Key Highlights</h4>
+            <details class="project-highlights">
+              <summary>Key Highlights</summary>
               <ul>
                 <li>Go Backend: Handles factory data, business logic, and API operations.</li>
                 <li>OpenAPI Tooling: Lets the AI agent understand and call backend APIs safely.</li>
@@ -241,7 +231,7 @@
                 <li>Tracing &amp; Monitoring: Uses LangSmith to debug agent steps, latency, and failures.</li>
                 <li>Live Streaming: Shows agent reasoning and tool execution progress in real time.</li>
               </ul>
-            </div>
+            </details>
 
             <div class="tech-stack">
               <span>Go</span>
@@ -268,6 +258,9 @@
               <a href="https://github.com/yongdilun/eMAS" target="_blank" rel="noopener" class="link-btn link-github">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.92.57.1.78-.25.78-.55v-1.93c-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.95 10.95 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.06.78 2.13v3.16c0 .31.2.66.79.55C20.21 21.4 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
                 View on GitHub
+              </a>
+              <a href="http://54.243.1.172/" target="_blank" rel="noopener" class="link-btn link-demo">
+                Click me for the link Visit Live Demo &rarr;
               </a>
             </div>
           </div>
@@ -304,8 +297,8 @@
               A split stack for a “guess the song / artist” experience: a Go backend owns song catalogs, filtering, random clip selection, multiplayer rooms, and real-time play over WebSockets—while a Flutter client delivers solo, 1v1, and room-based modes with timed rounds, audio preloading, and localization. Operators can build clip libraries from YouTube via a Python + ffmpeg pipeline, with optional Google Drive hosting for MP3s and local text catalogs for metadata—so clients focus on UX while the API owns catalog, randomization, and room lifecycle.
             </p>
 
-            <div class="project-highlights">
-              <h4>Key Highlights</h4>
+            <details class="project-highlights">
+              <summary>Key Highlights</summary>
               <ul>
                 <li>Backend: REST API for songs/artists—filters by language, year, range, artist; random unique picks; health &amp; CORS.</li>
                 <li>Rooms: create/join/leave, host actions (start, kick), room/game state, delete room; WebSocket hub (gorilla/websocket) at /rooms/{roomId}/stream.</li>
@@ -315,7 +308,7 @@
                 <li>Localization &amp; architecture: English, Chinese, and Japanese; Provider + services (song_data, room, realtime_room, audio); Android, iOS, and web from one codebase.</li>
                 <li>Deploy: production API at https://song-clash-api.onrender.com (overrideable for local dev).</li>
               </ul>
-            </div>
+            </details>
 
             <div class="tech-stack">
               <span>Go</span>
@@ -376,8 +369,8 @@
               A cross-platform chat product where people sign in, join rooms by code, and message instantly on web and mobile. It pairs a Go API with WebSockets for live updates, stores users in MySQL and chat data in MongoDB, and ships a responsive Next.js UI plus an Expo app—with JWT auth, bcrypt passwords, and Swagger-documented REST endpoints.
             </p>
 
-            <div class="project-highlights">
-              <h4>Key Highlights</h4>
+            <details class="project-highlights">
+              <summary>Key Highlights</summary>
               <ul>
                 <li>Accounts with JWT auth and bcrypt password hashing</li>
                 <li>Chatrooms with join codes and optional passwords</li>
@@ -387,7 +380,7 @@
                 <li>REST API + Swagger at /swagger/index.html</li>
                 <li>Responsive web (Next.js + Tailwind + Framer Motion) and React Native (Expo) clients</li>
               </ul>
-            </div>
+            </details>
 
             <div class="tech-stack">
               <span>Go</span>
@@ -451,8 +444,8 @@
               A full-stack recipe community where people discover, create, and share recipes. It offers separate experiences for everyday users (browse, save, rate, and comment) and administrators (moderation and recipe management), with secure accounts and a REST API behind a responsive web UI.
             </p>
 
-            <div class="project-highlights">
-              <h4>Key Highlights</h4>
+            <details class="project-highlights">
+              <summary>Key Highlights</summary>
               <ul>
                 <li>Role-based flows for users and admin (content moderation, dashboard)</li>
                 <li>Recipe discovery with search, filters, and sorting</li>
@@ -461,7 +454,7 @@
                 <li>REST API with JWT auth and password hashing (bcrypt)</li>
                 <li>Responsive layout for phones and desktops</li>
               </ul>
-            </div>
+            </details>
 
             <div class="tech-stack">
               <span>React</span>
@@ -517,8 +510,8 @@
               A full-stack automotive service management platform inspired by real workshop workflows. Customers book and track service appointments, manage vehicles, and see notifications; staff manage schedules, outlets, services, and appointment lifecycles. Clear role-based flows separate customer and staff experiences.
             </p>
 
-            <div class="project-highlights">
-              <h4>Key Highlights</h4>
+            <details class="project-highlights">
+              <summary>Key Highlights</summary>
               <ul>
                 <li>Role-based access for Customer vs Staff (login, dashboards, and guarded routes)</li>
                 <li>Appointment booking with services, outlets, time slots, and status tracking</li>
@@ -529,7 +522,7 @@
                 <li>Redis-backed caching for performance</li>
                 <li>Responsive UI: React, TypeScript, Vite, Tailwind CSS, React Router</li>
               </ul>
-            </div>
+            </details>
 
             <div class="tech-stack">
               <span>Spring Boot</span>
@@ -586,8 +579,8 @@
               assignments, grading, announcements, real-time chat, and progress tracking.
             </p>
 
-            <div class="project-highlights">
-              <h4>Key Highlights</h4>
+            <details class="project-highlights">
+              <summary>Key Highlights</summary>
               <ul>
                 <li>Role-based authentication for Teacher / Student access</li>
                 <li>Virtual classroom creation and enrollment with class codes</li>
@@ -596,7 +589,7 @@
                 <li>RESTful API backend with secure JWT authentication</li>
                 <li>Responsive modern UI with scalable architecture</li>
               </ul>
-            </div>
+            </details>
 
             <div class="tech-stack">
               <span>React</span>
@@ -616,17 +609,6 @@
             </div>
           </div>
         </article>
-
-        <!-- COMING SOON CARDS (placeholder for more projects) -->
-        <div class="coming-soon-grid">
-          <div class="coming-soon-card">
-            <div class="cs-number">07</div>
-            <div class="cs-content">
-              <span class="cs-badge">Coming Soon</span>
-              <p>Next project will be added here</p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
