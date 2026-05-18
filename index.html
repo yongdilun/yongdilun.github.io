@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yong Di Lun – Software Developer Portfolio</title>
   <meta name="description" content="Portfolio of Yong Di Lun – a passionate full-stack software developer building modern, scalable web applications." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171717'/%3E%3Cpath d='M18 20h8l6 11 6-11h8L35 40h-6L18 20z' fill='white'/%3E%3C/svg%3E" />
   <!-- Geist font from Vercel CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,16 +13,16 @@
   <style>
     @font-face {
       font-family: 'Geist';
-      src: url('https://assets.vercel.com/raw/upload/contentful/image/q/cncde5Ts91HHBqUlLSb1g/GeistVariableVF.woff2') format('woff2');
-      font-weight: 100 900; font-display: swap;
+      src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist:vf@latest/latin-wght-normal.woff2') format('woff2-variations');
+      font-weight: 100 900; font-style: normal; font-display: swap;
     }
     @font-face {
       font-family: 'Geist Mono';
-      src: url('https://assets.vercel.com/raw/upload/contentful/image/q/GeistMonoVariableVF.woff2') format('woff2');
-      font-weight: 100 900; font-display: swap;
+      src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@latest/latin-wght-normal.woff2') format('woff2-variations');
+      font-weight: 100 900; font-style: normal; font-display: swap;
     }
   </style>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20260518-14" />
 </head>
 <body>
 
@@ -29,12 +30,16 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Yong Di Lun</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </nav>
@@ -661,6 +666,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260518-14"></script>
 </body>
 </html>
